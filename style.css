@@ -1,0 +1,125 @@
+/*FONT IMPORTING*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*RESET*/
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Roboto", typo, sans-serif;
+}
+
+:root {
+    --red: #ff0000;
+    --orange :#f78b00;
+    --gray: #ededed;
+}
+
+html, body {
+    overflow-x: hidden; /*SEM BARRA DE ROLAGEM HORIZONTAL*/
+    width: 100%;
+}
+
+header {
+    width: 100%; /*LARGURA*/
+    height: 500px; /*ALTURA*/
+    background: var(--orange);
+}
+
+.content {
+    max-width: 1000px; /*RESPONSIVO - ACESSIVEL PARA DIFERENTES DISPOSITIVOS*/
+    min-width: 300px;  /*RESPONSIVO - ACESSIVEL PARA DIFERENTES DISPOSITIVOS*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 125px;
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--gray);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+nav ul li a:hover { /*QD O MOUSE PASSA EM CIMA ELE MUDA*/
+    color: #ededed83;
+}
+
+nav ul button {
+    border: 1px solid var(--gray);
+    background: transparent;
+    padding: 8px 40px;
+    cursor: pointer;
+    margin-left: 30px;
+    color: var(--gray);
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+nav ul button:hover {
+    background: var(--gray);
+    transition: background, color 0.8s;
+    color: rgb(116, 116, 116);
+}
+
+.content .header-block {
+    max-width: 1000px;
+    min-width: 300px;
+    height: 450px;
+    background: var(--gray);
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5); /*Para funcionar no safari*/
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5); /*Para funcionar no mozilla*/
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+
+.header-block img{
+    width: 40%;
+    position: absolute;
+    right: 2%;
+    bottom: 15%;
+}
+
+.header-block .text {
+    position: absolute;
+    bottom: 30%;
+    left: 15%;
+}
+
+.header-block .text h2{
+    color: white;
+    margin-bottom: 20px;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.5s;
+}
